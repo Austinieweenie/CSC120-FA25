@@ -24,5 +24,16 @@ int main() {
     for(int i=0; i<7; i=i+2) {
         printf("hello there i = %d\n", i);
     }
+
+    int a = 1;
+    int b = 1;
+    int c = 10;
+    bool check = true;
+    while(check) {
+        printf("c is equal to %d\n", c);
+        if(a < c) { c = c-a; }
+        else { check = false; }
+        
+    }
     return 0;
 }
