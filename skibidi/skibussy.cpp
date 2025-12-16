@@ -15,7 +15,7 @@ int main() {
     load_eq.push_back(y);
     load_eq.push_back(z);
 
-    calc.map_ice_lunch(load_eq);
+    calc.road_in(load_eq);
 
     return 0;
 }
