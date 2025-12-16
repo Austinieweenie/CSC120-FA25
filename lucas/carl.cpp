@@ -1,7 +1,32 @@
-#include <vector>
-#include <cstdio>
-using std::vector;
+#include"header.hpp"
 
+int main() {
+    vector<int> l =  {};
+    l = push_down(l, 5);
+    l = push_down(l, 6);
+    printf("%d, %d", l[0], l[1]);
+
+    l = pop_up(l);
+    printf("%d\n", l[0]);
+
+    vector<int> q = {};
+
+    q = push_q(q, 10);
+    q = push_q(q, 20);
+    q = push_q(q, 30);
+
+    print_queue(q);
+
+        int e = pop_q(q);
+        printf("popped %d", e);
+    return 0;
+}
+
+void print_queue(vector<int> q) {
+    for(int i=0; i<q.size(); i++) {printf("%d ", q.at(i));
+    }
+    return;
+}
 
 vector<int> push_down(vector<int> v, int e) {
     v.insert(v.begin(), e);
@@ -15,14 +40,13 @@ vector<int> pop_up(vector<int> v) {
 
 }
 
-int main() {
-    vector<int> l =  {};
-    l = push_down(l, 5);
-    l = push_down(l, 6);
-    printf("%d, %d", l[0], l[1]);
+vector<int> push_q(vector<int> q, int e) {
+    q.push_back(e);
+    return q;
+}
 
-    l = pop_up(l);
-    printf("%d\n", l[0]);
-
-    return 0;
+int pop_q(vector<int> q) {
+    int r = q.at(0);
+    q.erase(q.begin());
+    return r;
 }
