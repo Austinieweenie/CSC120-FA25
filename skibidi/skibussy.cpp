@@ -9,7 +9,7 @@ int main() {
 
     Calc::ice_cream x {0, '+'};
     Calc::ice_cream y {1, 'e'};
-    Calc::ice_cream z {0, '+'};
+    Calc::ice_cream z {1, 'e'};
 
     load_eq.push_back(x);
     load_eq.push_back(y);
@@ -33,4 +33,5 @@ vector<Calc::lunchbox> Calc::map_ice_lunch(vector<Calc::ice_cream> x) {
         ret.push_back(c);
         printf("%d, %c", c.num, c.op);
     }
+    return ret;
 }

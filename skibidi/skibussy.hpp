@@ -23,6 +23,7 @@ private:
     int division(int, int);
    
 public:
+    // Calc();
     struct ice_cream {
         int flavor;
         char cone;
@@ -32,7 +33,7 @@ public:
         }
     };
     vector<lunchbox> map_ice_lunch(vector<ice_cream>);
-    Calc();
+    
     void road_in(vector<ice_cream>);
       
 };
