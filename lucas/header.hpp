@@ -3,7 +3,7 @@
 using std::vector;
 using std::printf;
 
-void print_queue(vector<int>);
+void print_stack(vector<int>);
 vector<int> push_down(vector<int>, int);
 vector<int> pop_up(vector<int>);
 vector<int> push_q(vector<int>, int);

@@ -15,14 +15,15 @@ int main() {
     q = push_q(q, 20);
     q = push_q(q, 30);
 
-    print_queue(q);
+    print_stack(q);
 
         int e = pop_q(q);
-        printf("popped %d", e);
+        printf(" popped %d", e);
+        printf("\n%c %d", q[0], q[1]);
     return 0;
 }
 
-void print_queue(vector<int> q) {
+void print_stack(vector<int> q) {
     for(int i=0; i<q.size(); i++) {printf("%d ", q.at(i));
     }
     return;
